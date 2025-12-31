@@ -7,7 +7,7 @@ version = project.mod_version
 group = project.maven_group
 
 base {
-	archivesName = project.archives_base_name
+	archivesName = "no-place-cooldown"
 }
 
 repositories {
@@ -22,7 +22,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"template-mod" {
+		"no-place-cooldown" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

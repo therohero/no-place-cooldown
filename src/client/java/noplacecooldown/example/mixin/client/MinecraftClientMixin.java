@@ -1,4 +1,4 @@
-package com.example.mixin.client;
+package noplacecooldown.example.mixin.client;
 
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
