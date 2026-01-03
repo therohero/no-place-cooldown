@@ -1,6 +1,8 @@
 package noplacecooldown.example.mixin.client;
 
 import net.minecraft.client.Minecraft;
+import noplacecooldown.example.NoPlaceCooldownState;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,6 +18,9 @@ public class MinecraftClientMixin {
     @Inject(at = @At("HEAD"), method = "tick()V") // Wird jeden Tick aufgerufen
     private void removePlaceDelay(CallbackInfo info) {
         // Setzt den Timer auf 0, damit sofort wieder platziert werden kann
-        this.rightClickDelay = 0;
+
+        if (NoPlaceCooldownState.enabled) {
+            this.rightClickDelay = 0;
+        }
     }
 }

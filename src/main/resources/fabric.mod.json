@@ -18,6 +18,7 @@
 		"main": [
 		],
 		"client": [
+			"noplacecooldown.example.NoPlaceCooldownClient"
 		]
 	},
 	"mixins": [
